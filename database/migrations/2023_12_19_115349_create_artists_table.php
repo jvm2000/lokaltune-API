@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('image');
             $table->json('genres');
             $table->json('socmed_links');
-            $table->foreignIdFor(\App\Models\User::class);
+            $table->foreignUuid(\App\Models\User::class);
             $table->timestamps();
         });
     }

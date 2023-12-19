@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('lyrics');
             $table->text('image');
             $table->text('file_mp3');
-            $table->foreignIdFor(\App\Models\Artist::class);
+            $table->foreignUuid(\App\Models\Artist::class);
             $table->timestamps();
         });
     }

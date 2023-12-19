@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->uuid();
-            $table->foreignIdFor(\App\Models\User::class);
-            $table->foreignIdFor(\App\Models\Songs::class);
+            $table->foreignUuid(\App\Models\User::class);
+            $table->foreignUuid(\App\Models\Songs::class);
             $table->text('comment_text');
             $table->date('date_posted');
             $table->timestamps();

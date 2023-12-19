@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('likes', function (Blueprint $table) {
             $table->uuid();
-            $table->foreignIdFor(\App\Models\User::class);
-            $table->foreignIdFor(\App\Models\Songs::class);
+            $table->foreignUuid(\App\Models\User::class);
+            $table->foreignUuid(\App\Models\Songs::class);
             $table->date('date_liked');
             $table->timestamps();
         });

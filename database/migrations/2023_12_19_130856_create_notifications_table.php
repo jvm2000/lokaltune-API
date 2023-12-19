@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('type');
             $table->text('content');
-            $table->foreignIdFor(\App\Models\User::class);
+            $table->foreignUuid(\App\Models\User::class);
             $table->timestamps();
         });
     }
